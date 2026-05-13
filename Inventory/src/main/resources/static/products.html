@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Products</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1>Products</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="inventory.html">Inventory</a></li>
+                <li><a href="alerts.html">Alerts</a></li>
+                      <li><a href="users.html">Users</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Manage Products</h2>
+        
+        <form id="productForm">
+    <input type="hidden" id="product_id" />
+    
+    <input type="text" id="product_name" placeholder="Product Name" required />
+    
+    <input type="text" id="brand" placeholder="Brand" />  <!-- NEW FIELD -->
+    
+    <input type="text" id="category" placeholder="Category" />
+    
+    <input type="number" id="shelf_life_days" placeholder="Shelf Life (days)" />
+    
+    <button type="submit">Save Product</button>
+</form>
+
+
+        <h3>Product List</h3>
+       <table id="productTable">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Brand</th>
+            <th>Category</th>
+            <th>Shelf Life</th>
+            <th>Created At</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Product rows will be dynamically loaded -->
+    </tbody>
+</table>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

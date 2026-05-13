@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Inventory</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1>Inventory</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="inventory.html">Inventory</a></li>
+                <li><a href="alerts.html">Alerts</a></li>
+                      <li><a href="users.html">Users</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Manage Inventory</h2>
+
+       <form id="inventoryForm">
+    <input type="hidden" id="inventory_id" />
+
+    <input type="number" id="product_id" placeholder="Product ID" required />
+    <input type="text" id="batch_no" placeholder="Batch No" required />
+
+    <label for="manufacture_date">Manufacture Date:</label>
+    <input type="date" id="manufacture_date" placeholder="dd-mm-yyyy" required />
+
+    <label for="expiry_date">Expiry Date:</label>
+    <input type="date" id="expiry_date" placeholder="dd-mm-yyyy" required />
+
+    <input type="number" id="quantity" placeholder="Quantity" min="0" required />
+    <input type="text" id="warehouse_location" placeholder="Warehouse Location" />
+
+    <button type="submit">Save Inventory</button>
+</form>
+
+
+        <h3>Inventory List</h3>
+        <table id="inventoryTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Product ID</th>
+                    <th>Batch No</th>
+                    <th>Manufacture Date</th>
+                    <th>Expiry Date</th>
+                    <th>Quantity</th>
+                    <th>Warehouse</th>
+                    <th>Last Updated</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Inventory rows will be dynamically loaded -->
+            </tbody>
+        </table>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
